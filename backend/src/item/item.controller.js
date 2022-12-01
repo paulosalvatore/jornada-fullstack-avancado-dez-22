@@ -21,7 +21,17 @@ const findById = (req, res) => {
   res.send(item);
 };
 
-const create = (req, res) => {};
+const create = (req, res) => {
+  const item = req.body;
+
+  if (!item || !item.name || !item.imageUrl || !item.category) {
+    return res.status(400).send({ message: "Dados inválidos." });
+  }
+
+  const newItem = {};
+
+  res.status(201).send(newItem);
+};
 
 const update = (req, res) => {};
 
