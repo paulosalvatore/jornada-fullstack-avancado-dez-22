@@ -21,7 +21,16 @@ const findById = (req, res) => {
   res.send(item);
 };
 
+const create = (req, res) => {};
+
+const update = (req, res) => {};
+
+const deleteById = (req, res) => {};
+
 module.exports = {
   findAll,
   findById,
+  create,
+  update,
+  deleteById,
 };
