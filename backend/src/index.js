@@ -23,6 +23,8 @@ async function main() {
 
   // Inicialização dos `Routers`
   app.use("/item", itemRouter);
+  // Exercício: criar o Router de Category, com os endpoints ReadAll e Create
+  // Category -> terá apenas name
 
   // Inicia o servidor
   app.listen(port, () => {
