@@ -55,7 +55,21 @@ const update = (req, res) => {
   res.send({ message: "Item atualizado com sucesso!" });
 };
 
-const deleteById = (req, res) => {};
+const deleteById = (req, res) => {
+  const id = req.params.id;
+
+  if (!isObjectIdValid(id)) {
+    return res.status(400).send({ message: "ID inválido!" });
+  }
+
+  const deletedItem = {};
+
+  if (!deletedItem) {
+    return res.status(404).send({ message: "Item não encontrado!" });
+  }
+
+  res.send({ message: "Item excluído com sucesso!" });
+};
 
 module.exports = {
   findAll,
