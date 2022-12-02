@@ -12,7 +12,7 @@ const connectToDatabase = () => {
 };
 
 const isObjectIdValid = (id) => {
-  return true;
+  return mongoose.Types.ObjectId.isValid(id);
 };
 
 module.exports = {
