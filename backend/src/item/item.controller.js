@@ -50,7 +50,7 @@ const update = async (req, res) => {
   const updatedItem = await service.update(id, item);
 
   if (!updatedItem) {
-    return res.send(404).send({ message: "Item não encontrado!" });
+    return res.status(404).send({ message: "Item não encontrado!" });
   }
 
   res.send({ message: "Item atualizado com sucesso!" });
