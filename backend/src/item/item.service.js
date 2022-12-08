@@ -2,7 +2,11 @@ const Item = require("./item.model");
 const ObjectId = require("mongoose").Types.ObjectId;
 
 const findAll = () => {
-  return Item.find().select("_id name imageUrl");
+  return Item.find().select({
+    _id: true,
+    name: true,
+    imageUrl: true,
+  });
 };
 
 const findById = (id) => {

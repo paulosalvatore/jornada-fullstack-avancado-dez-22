@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+// const databaseUrl =
+//   "mongodb+srv://admin:V90K7ehx2krw7OlM@cluster0.gbnr4oi.mongodb.net/jornada-fullstack-avancado";
 const databaseUrl = "mongodb://127.0.0.1:27017/jornada-fullstack-avancado";
 
 const connectToDatabase = () => {
