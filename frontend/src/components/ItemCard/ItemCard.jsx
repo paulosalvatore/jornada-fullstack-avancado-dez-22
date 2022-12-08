@@ -1,6 +1,6 @@
-import "./ItemCard.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTrashCan } from "@fortawesome/free-solid-svg-icons"
+import "./ItemCard.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { Api } from "../../api/api";
 import { useNavigate } from "react-router-dom";
 
@@ -29,11 +29,15 @@ function ItemCard(props) {
 
   return (
     <div className="ItemCard">
-      <FontAwesomeIcon onClick={excluirItem} className="icon-delete" icon={faTrashCan} />
-      <h1>{item.nome}</h1>
-      <img src={item.imagemUrl} alt={"Imagem do " + item.nome} width={200} />
+      <FontAwesomeIcon
+        onClick={excluirItem}
+        className="icon-delete"
+        icon={faTrashCan}
+      />
+      <h1>{item.name}</h1>
+      <img src={item.imageUrl} alt={"Imagem do " + item.name} width={200} />
     </div>
-  )
+  );
 }
 
 export default ItemCard;

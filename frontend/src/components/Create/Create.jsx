@@ -8,20 +8,21 @@ function Create() {
   async function processarSubmit(event) {
     event.preventDefault();
 
-    const nome = event.target.nome.value;
-    const imagemUrl = event.target.imagemUrl.value;
+    const name = event.target.nome.value;
+    const imageUrl = event.target.imagemUrl.value;
 
     const payload = {
-      nome,
-      imagemUrl,
+      name,
+      imageUrl,
+      category: "639125626c1f13280f13b7b6",
     };
 
-    const createUrl = Api.itens.create();
+    const createUrl = Api.item.create();
     const response = await Api.buildApiPostRequest(createUrl, payload);
     const body = await response.json();
 
-    if (response.status === 200) {
-      alert(body.message);
+    if (response.status === 201) {
+      alert("Item criado com sucesso!");
       navigate("/");
     } else {
       alert("Algum erro ocorreu, tente novamente.");

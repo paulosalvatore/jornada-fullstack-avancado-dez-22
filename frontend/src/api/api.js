@@ -1,11 +1,11 @@
 export const Api = {
-  // baseUrl: "http://localhost:3000/",
-  baseUrl: "https://ocean-jornada-fullstack-novembro-22-cfwy.onrender.com/",
+  baseUrl: "http://localhost:3000/",
+  // baseUrl: "https://ocean-jornada-fullstack-novembro-22-cfwy.onrender.com/",
 
   // Endpoints de itens
-  itens: {
+  item: {
     endpoint: function () {
-      return Api.baseUrl + "itens";
+      return Api.baseUrl + "item";
     },
     readAll: function () {
       return this.endpoint() + "/";
